@@ -1,0 +1,5 @@
+{
+  "title": "ZONOS3-Mini",
+  "description": "Zyphra's compact multilingual text-to-speech (43 languages) with voice cloning, voice design and emotion steering. Runs the native ggml server with Zonos Voice Studio (CUDA, Metal or CPU). https://huggingface.co/Zyphra/ZONOS3-Mini",
+  "icon": "icon.png"
+}
