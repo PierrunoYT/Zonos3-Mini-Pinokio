@@ -140,4 +140,4 @@ await writeFile("hello.wav", Buffer.from(await res.arrayBuffer()));
 
 ## License
 
-ZONOS3-Mini weights: Apache-2.0. ZONOS3-Mini code: MIT. See the [model card](https://huggingface.co/Zyphra/ZONOS3-Mini) and the [repo](https://github.com/Zyphra/ZONOS3-Mini).
+ZONOS3-Mini weights: Apache-2.0. ZONOS3-Mini code: MIT. See the [model card](https://huggingface.co/Zyphra/ZONOS3-Mini) and the [repo](https://github.com/Zyphra/ZONOS3-Mini). This launcher is MIT licensed (see [LICENSE](LICENSE)).
