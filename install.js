@@ -13,12 +13,13 @@ module.exports = {
       }
     },
     // The ggml server needs only these two submodules (fusealign is for speech editing).
+    // --force drops the ggml patches CMake applied to the submodule; the configure step re-applies them.
     {
       method: "shell.run",
       params: {
         path: "app",
         message: [
-          "git submodule update --init servers/ggml/ggml third_party/zyphra-textnorm"
+          "git submodule update --init --force servers/ggml/ggml third_party/zyphra-textnorm"
         ]
       }
     },

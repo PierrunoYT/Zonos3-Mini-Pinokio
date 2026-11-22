@@ -4,7 +4,9 @@ module.exports = {
   description: "Zyphra's compact multilingual text-to-speech (43 languages) with voice cloning, voice design and emotion steering. Runs the native ggml server with Zonos Voice Studio (CUDA, Metal or CPU). https://huggingface.co/Zyphra/ZONOS3-Mini",
   icon: "icon.png",
   menu: async (kernel, info) => {
+    // Install builds the server first and downloads the models last: require both.
     let installed = info.exists("app/servers/ggml/build/" + (kernel.platform === "win32" ? "zonos3-server.exe" : "zonos3-server"))
+      && ["backbone-ptq", "zac-keep2", "spk-encoder", "steer"].every((name) => info.exists(`models/gguf/${name}.gguf`))
     let running = {
       install: info.running("install.js"),
       start: info.running("start.js"),

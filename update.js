@@ -10,7 +10,9 @@ module.exports = {
       path: "app",
       message: [
         "git pull",
-        "git submodule update --init servers/ggml/ggml third_party/zyphra-textnorm"
+        // --force drops the ggml patches CMake applied to the submodule, so a new ggml pin checks out
+        // and the configure step below applies the current patch set to a clean tree.
+        "git submodule update --init --force servers/ggml/ggml third_party/zyphra-textnorm"
       ]
     }
   }, {
